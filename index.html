@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <script src="https://kit.fontawesome.com/5d82546e11.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+</head>
+<body class="font-quicksand bg-black relative">
+    <!-- nav begins ------------->
+    <div>
+        <nav class="flex justify-between items-center w-full sm:w-auto sm:p-7 pt-7 px-5 fixed top-0 z-50">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-5">
+                    <div class="sm:hidden"><i class="fa-solid fa-bars text-text-color" id="menu-open"></i></div>
+                    <div class=""><img src="images/logo.svg" alt="logo"></div>
+                </div>
+                <div class="py-2 px-6 hidden sm:block bg-black rounded-3xl">
+                    <div class="flex items-center gap-6">
+                        <div><i class="fa-solid fa-magnifying-glass text-text-color"></i></div>
+                        <div><input type="search" placeholder="Search artists" class="text-text-color bg-black"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sm:hidden"><i class="fa-solid fa-magnifying-glass text-text-color"></i></div>
+        </nav>
+    </div>
+        <!-- nav ends ------------->
+
+<!-- main begins ------->
+    <div>
+        <main class="sm:pt-14 flex items-center w-full sm:relative">
+
+
+            <div class="sm:block fixed top-16 z-50 hidden" id="menu">
+                <div class="sm:w-14 w-full h-60 bg-[#1A1E1F] rounded-[32px] mx-5 px-4 py-7 flex flex-col justify-evenly">
+                    <input type="radio" id="home-button" name="menu-item" class="hidden" checked>
+                    <label for="home-button">
+                        <div class="flex gap-8 items-center z-50" id="home">
+                            <div>
+                                <svg width="18" height="20" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100" id="svg">
+                            <path d="M6.38171 18.0503V15.239C6.3817 14.5266 6.96099 13.9478 7.67852 13.9433H10.3132C11.0339 13.9433 11.6182 14.5234 11.6182 15.239V18.0421C11.6182 18.66 12.1203 19.1622 12.7427 19.1667H14.5401C15.3796 19.1688 16.1855 18.8392 16.7799 18.2507C17.3742 17.6621 17.7083 16.8629 17.7083 16.0294V8.0437C17.7083 7.37045 17.4077 6.73183 16.8875 6.29989L10.781 1.45142C9.7136 0.603372 8.18905 0.630768 7.15323 1.51661L1.17805 6.29989C0.633305 6.7191 0.307716 7.35961 0.291626 8.0437V16.0213C0.291626 17.7584 1.71006 19.1667 3.45978 19.1667H5.21623C5.51587 19.1688 5.80399 19.0522 6.01664 18.8426C6.2293 18.633 6.34889 18.3478 6.34888 18.0503H6.38171Z"/>
+                            </svg>
+                            </div>
+                            <div class="sm:hidden">
+                                <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25" id="text">Home</p>
+                            </div>
+                            
+                                
+                            
+                        </div>
+                    </label>
+                    <input type="radio" id="collection-button" name="menu-item" class="hidden">
+                    <label for="collection-button">
+                        <div class="flex gap-8 items-center z-50" id="collection">
+                            <div>
+                                <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100" id="svg">
+                                    <path d="M15.5834 4.35416H14.6667V2.98832C14.6667 2.22749 14.0434 1.60416 13.2825 1.60416H8.71754C7.95671 1.60416 7.33337 2.22749 7.33337 2.98832V4.35416H6.41671C5.40837 4.35416 4.58337 5.17916 4.58337 6.18749V6.30666C4.87671 6.22416 5.17921 6.18749 5.50004 6.18749H16.5C16.8209 6.18749 17.1234 6.22416 17.4167 6.30666V6.18749C17.4167 5.17916 16.5917 4.35416 15.5834 4.35416Z"/>
+                                    <path d="M12.7692 15.5192C12.4759 15.5192 12.2467 15.7575 12.2467 16.0417C12.2467 16.3258 12.485 16.5642 12.7692 16.5642C13.0534 16.5642 13.2917 16.3258 13.2917 16.0417C13.2917 15.7575 13.0534 15.5192 12.7692 15.5192Z"/>
+                                    <path d="M8.31413 16.3258C8.02079 16.3258 7.79163 16.5642 7.79163 16.8483C7.79163 17.1325 8.02996 17.3708 8.31413 17.3708C8.59829 17.3708 8.83663 17.1325 8.83663 16.8483C8.83663 16.5642 8.60746 16.3258 8.31413 16.3258Z"/>
+                                    <path d="M17.4167 7.68167C17.1234 7.59917 16.8209 7.5625 16.5 7.5625H5.50004C5.17921 7.5625 4.87671 7.59917 4.58337 7.68167C3.00671 8.09417 1.83337 9.53333 1.83337 11.2292V16.7292C1.83337 18.7458 3.48337 20.3958 5.50004 20.3958H16.5C18.5167 20.3958 20.1667 18.7458 20.1667 16.7292V11.2292C20.1667 9.53333 18.9934 8.09417 17.4167 7.68167ZM14.6667 12.1733V16.0417C14.6667 17.0867 13.8142 17.9392 12.7692 17.9392C11.7242 17.9392 10.8717 17.0867 10.8717 16.0417C10.8717 14.9967 11.7242 14.1442 12.7692 14.1442C12.9525 14.1442 13.1267 14.1808 13.2917 14.2267V13.0717L10.2209 13.9058V16.8483C10.2209 16.8575 10.2209 16.8667 10.2117 16.8758C10.2025 17.9117 9.35004 18.755 8.31421 18.755C7.26921 18.755 6.41671 17.9025 6.41671 16.8483C6.41671 15.7942 7.26921 14.9508 8.31421 14.9508C8.49754 14.9508 8.67171 14.9875 8.84587 15.0333V13.3833V11.9625C8.84587 11.1742 9.34087 10.5325 10.0925 10.3308L12.5217 9.66167C13.3009 9.45083 13.7959 9.6525 14.0709 9.86333C14.3459 10.0742 14.6667 10.4867 14.6667 11.3025V12.1733Z"/>
+                                </svg>
+                            </div>
+                            <div class="sm:hidden">
+                                <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25
+                                " id="text">My Collections</p>
+                            </div>
+                            
+                                
+                            
+                        </div>
+                    </label>
+                    
+                        
+                    
+                    
+
+                    <div class="flex gap-8 items-center z-50">
+                        <div>
+                            <svg width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100">
+                        <path d="M14.5834 0.583328H5.41671C5.17837 0.583328 4.94921 0.592495 4.72921 0.629162C2.36421 0.904162 0.833374 2.65499 0.833374 5.16666V11.5833C0.833374 14.3333 2.66671 16.1667 5.41671 16.1667H14.5834C17.3334 16.1667 19.1667 14.3333 19.1667 11.5833V5.16666C19.1667 2.41666 17.3334 0.583328 14.5834 0.583328ZM6.22337 10.6667C4.95837 10.6667 3.93171 9.63999 3.93171 8.37499C3.93171 7.10999 4.95837 6.08333 6.22337 6.08333C7.48837 6.08333 8.51504 7.10999 8.51504 8.37499C8.51504 9.63999 7.48837 10.6667 6.22337 10.6667ZM12.1817 10.8958H11.7234C11.3475 10.8958 11.0359 10.5842 11.0359 10.2083C11.0359 9.83249 11.3475 9.52083 11.7234 9.52083H12.1817C12.5575 9.52083 12.8692 9.83249 12.8692 10.2083C12.8692 10.5842 12.5575 10.8958 12.1817 10.8958ZM15.39 10.8958H14.9317C14.5559 10.8958 14.2442 10.5842 14.2442 10.2083C14.2442 9.83249 14.5559 9.52083 14.9317 9.52083H15.39C15.7659 9.52083 16.0775 9.83249 16.0775 10.2083C16.0775 10.5842 15.7659 10.8958 15.39 10.8958ZM15.39 7.22916H11.7234C11.3475 7.22916 11.0359 6.91749 11.0359 6.54166C11.0359 6.16583 11.3475 5.85416 11.7234 5.85416H15.39C15.7659 5.85416 16.0775 6.16583 16.0775 6.54166C16.0775 6.91749 15.7659 7.22916 15.39 7.22916Z"/>
+                    </svg>
+                        </div>
+                        <div class="sm:hidden">
+                            <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25
+                            ">Radio</p>
+                        </div>
+                        
+                            
+                        
+                    </div>
+                        
+                        
+
+                        <div class="flex gap-8 items-center z-50">
+                            <div>
+                               <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100">
+                            <path d="M10.3125 7.205H1.83337V14.8408C1.83337 14.8958 1.83337 14.9508 1.84254 14.9967H10.3125V7.205Z"/>
+                            <path d="M7.04919 5.83H10.3125V1.83333H7.07669V5.71999C7.07669 5.75666 7.05836 5.79333 7.04919 5.83Z"/>
+                            <path d="M5.70168 5.72V1.98C3.66668 2.40166 2.33751 3.75833 1.95251 5.83H5.72001C5.71085 5.79333 5.70168 5.75666 5.70168 5.72Z"/>
+                            <path d="M14.8683 1.83333H11.6875V5.83H14.8683V1.83333Z"/>
+                            <path d="M16.2341 5.83001H20.0475C19.6625 3.74001 18.315 2.37417 16.2433 1.97084V5.80251C16.2433 5.81167 16.2341 5.82084 16.2341 5.83001Z"/>
+                            <path d="M16.2433 20.0292C18.2508 19.635 19.5708 18.3517 20.0016 16.3717H16.2433V20.0292Z"/>
+                            <path d="M14.8683 16.3717H11.6875V20.1667H14.8683V16.3717Z"/>
+                            <path d="M11.6875 14.9967H20.1575C20.1667 14.9508 20.1667 14.8958 20.1667 14.8408V7.205H11.6875V14.9967Z" />
+                            <path d="M10.3125 16.3717H7.07666V20.1667H10.3125V16.3717Z"/>
+                            <path d="M1.99829 16.3717C2.42912 18.3333 3.73079 19.6167 5.70162 20.02V16.3717H1.99829Z"/>
+                        </svg>
+                            </div>
+                            <div class="sm:hidden">
+                                <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25
+                                ">Music videos</p>
+                            </div>
+                            
+                                
+                            
+                        </div>
+                            
+                </div>
+
+                <div class="mt-5 sm:w-14 w-full h-32 bg-[#1A1E1F] rounded-[32px] mx-5 px-4 py-7 flex flex-col justify-evenly">
+                    
+
+                    <div class="flex gap-8 items-center z-50">
+                        <div>
+                           <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100">
+                                <g>
+                                <path d="M11 1.83333C8.59837 1.83333 6.64587 3.78583 6.64587 6.18749C6.64587 8.54333 8.48837 10.45 10.89 10.5325C10.9634 10.5233 11.0367 10.5233 11.0917 10.5325C11.11 10.5325 11.1192 10.5325 11.1375 10.5325C11.1467 10.5325 11.1467 10.5325 11.1559 10.5325C13.5025 10.45 15.345 8.54333 15.3542 6.18749C15.3542 3.78583 13.4017 1.83333 11 1.83333Z" />
+                                <path d="M15.6566 12.9708C13.0991 11.2658 8.9283 11.2658 6.35246 12.9708C5.1883 13.75 4.54663 14.8042 4.54663 15.9317C4.54663 17.0592 5.1883 18.1042 6.3433 18.8742C7.62663 19.7358 9.3133 20.1667 11 20.1667C12.6866 20.1667 14.3733 19.7358 15.6566 18.8742C16.8116 18.095 17.4533 17.05 17.4533 15.9133C17.4441 14.7858 16.8116 13.7408 15.6566 12.9708Z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="sm:hidden">
+                            <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25
+                            ">Profile</p>
+                        </div>
+                        
+                            
+                        
+                    </div>
+                        
+                    
+
+                    <div class="flex gap-8 items-center z-50">
+                        <div>
+                          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-[#EFEEE0] w-6 h-6 opacity-25 hover:fill-[#FACD66] hover:opacity-100">
+                        <g>
+                        <path d="M10.535 1.83334C12.8107 1.83334 14.6667 3.6575 14.6667 5.90334V10.2942H9.07078C8.66974 10.2942 8.35263 10.6058 8.35263 11C8.35263 11.385 8.66974 11.7058 9.07078 11.7058H14.6667V16.0875C14.6667 18.3333 12.8107 20.1667 10.5164 20.1667H5.97436C3.68936 20.1667 1.83337 18.3425 1.83337 16.0967V5.9125C1.83337 3.6575 3.69868 1.83334 5.98369 1.83334H10.535ZM16.9952 7.83769C17.2702 7.55352 17.7194 7.55352 17.9944 7.82852L20.6711 10.496C20.8086 10.6335 20.8819 10.8077 20.8819 11.0002C20.8819 11.1835 20.8086 11.3669 20.6711 11.4952L17.9944 14.1627C17.8569 14.3002 17.6736 14.3735 17.4994 14.3735C17.3161 14.3735 17.1327 14.3002 16.9952 14.1627C16.7202 13.8877 16.7202 13.4385 16.9952 13.1635L18.4619 11.706H14.6669V10.2944H18.4619L16.9952 8.83685C16.7202 8.56185 16.7202 8.11269 16.9952 7.83769Z"/>
+                        </g>
+                            </svg>  
+                        </div>
+                        <div class="sm:hidden">
+                            <p class="font-bold text-lg hover:text-[white] hover:opacity-100 text-[#EFEEE0] opacity-25
+                            ">Log out</p>
+                        </div>
+                        
+                            
+                        
+                    </div>
+                        
+                </div>
+            </div>
+<!-- home page begins here --------------------->
+        <div class="sm:pl-20 sm:pt-0 pt-16 w-full" id="home-page">
+            <div class="w-full sm:flex sm:flex-row flex-col justify-between items-start gap-4 sm:pr-4 mb-8">
+                <div class="sm:w-[60%] w-full p-4">
+                    <div class="w-full- h-[373px] rounded-[40px] bg-[#609EAF] flex items-center relative">
+                        <div class="sm:mx-11 mx-5 py-9 sm:w-[40%] w-full" id="body-text">
+                            <div class="sm:mb-20 mb-32">
+                                <p class="text-[12px] font-normal text-[white]">Curated playlist</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <p class="text-[35px] font-bold text-[white] mb-2">R & B Hits</p>
+                                    <p class="text-sm font-normal text-[white]">All mine, Lie again, Petty call me everyday,
+                                    Out of time, No love, Bad habit,
+                                    and so much more</p>
+                                </div>
+                                <div class="sm:mt-11 mt-5 flex items-center gap-2">
+                                    <img src="/images/Frame 4.png" alt="iamge of people">
+                                    <img src="/images/Vector.svg">
+                                    <p class="font-normal text-sm text-[white]">33k Likes</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative h-full w-[60%] hidden sm:block">
+                            <div class="absolute top-0 right-6 overflow-clip w-full h-full z-20">
+                                <img src="/images/Pexels Photo by Eric Esma.png" class="object-cover w-full h-full">
+                            </div>
+                            <div class="absolute top-0 right-0 overflow-clip z-10 w-full h-full">
+                                <img src="/images/bg-vector.png" alt="bg-image-vector" class="object-cover w-full h-full ">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="sm:w-[40%] w-full">
+                    <div class="w-full sm:p-0 p-4">
+                        <p class="font-bold text-2xl text-[#EFEEE0]">Top charts</p>
+                    </div>
+                    <div class="w-full h-full overflow-x-scroll sm:overflow-hidden ">
+                        <div class="w-[1000px] sm:w-auto h-full grid grid-cols-3 sm:block gap-2">
+                            <div class="sm:w-full w-80 sm:h-28 h-56 rounded-3xl bg-[#1A1E1F] sm:px-[17px] sm:py-[17px] flex sm:items-center items-start justify-between mb-3 open-chart">
+                                <div class="flex sm:flex-row flex-col h-full w-80% items-center gap-2">
+                                    <div class="sm:w-[63px] w-[108px] sm:h-full h-[99px] rounded-2xl sm:mb-0 mb-8">
+                                        <img src="/images/golden.png" alt="golden image" class="object-cover w-full h-full rounded-xl">
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-normal text-lg text-[white] mb-1">Golden age of 80s</p>
+                                        <p class="font-normal text-xs text-[white] opacity-50 mb-2">Sean Swaddler</p>
+                                        <p class="font-normal text-xs text-[white]">2:34:45</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative w-7 h-7">
+                                    <img src="/images/Ellipse 9.svg" class="absolute top-0 right-0">
+                                    <img src="/images/Heart.svg" class="absolute top-[20%] right-[17%]">
+                                </div>
+                                
+                            </div>
+    
+                            <div class="sm:w-full w-80 sm:h-28 h-56 rounded-3xl bg-[#1A1E1F] sm:px-[17px] sm:py-[17px] flex sm:items-center items-start justify-between mb-3 open-chart">
+                                <div class="flex sm:flex-row flex-col h-full w-80% items-center gap-2">
+                                    <div class="sm:w-[63px] w-[108px] sm:h-full h-[99px] rounded-2xl sm:mb-0 mb-8">
+                                        <img src="/images/reggae.png" alt="golden image" class="object-cover w-full h-full rounded-xl">
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-normal text-lg text-[white] mb-1">Reggae "n" blues</p>
+                                        <p class="font-normal text-xs text-[white] opacity-50 mb-2">Dj YK mule</p>
+                                        <p class="font-normal text-xs text-[white]">1:02:42</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative w-7 h-7">
+                                    <img src="/images/Ellipse 9.svg" class="absolute top-0 right-0">
+                                    <img src="/images/Heart.svg" class="absolute top-[20%] right-[17%]">
+                                </div>
+                                
+                            </div>
+    
+                            <div class="sm:w-full w-80 sm:h-28 h-56 rounded-3xl bg-[#1A1E1F] sm:px-[17px] sm:py-[17px] flex sm:items-center items-start justify-between mb-3 open-chart" id="open-chart">
+                                <div class="flex sm:flex-row flex-col h-full w-80% items-center gap-2">
+                                    <div class="sm:w-[63px] w-[108px] sm:h-full h-[99px] rounded-2xl sm:mb-0 mb-8">
+                                        <img src="/images/tomorrow.png" alt="golden image" class="object-cover w-full h-full rounded-xl">
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-normal text-lg text-[white] mb-1">Tomorrow's tunes</p>
+                                        <p class="font-normal text-xs text-[white] opacity-50 mb-2">Obi Datti</p>
+                                        <p class="font-normal text-xs text-[white]">2:01:25</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="relative w-7 h-7">
+                                    <img src="/images/Ellipse 9.svg" class="absolute top-0 right-0">
+                                    <img src="/images/Heart.svg" class="absolute top-[20%] right-[17%]">
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+<!-- new releases begins ------->
+            <div class="pl-4">
+                <div class="w-full mb-3">
+                    <p class="font-bold text-2xl text-[#EFEEE0]">New Releases.</p>
+                </div>
+                <div class="w-full h-52 overflow-x-scroll">
+                    <div class="w-[1281px] h-full grid gap-6 grid-cols-7">
+                        <div class="h-36 w-36 ">
+                            <img src="/images/Rectangle 14.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Life in a bubble</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 15.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Mountain</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Limits</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 17.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Everything black</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 19.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Cancelled</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 20.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Nomad</p>
+                        </div>
+                        <div class="h-36 w-36">
+                            <img src="/images/Rectangle 18.png" class="w-full h-full object-cover rounded-2xl">
+                             <p class="font-normal text-sm text-[white] mt-2">Blind</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+<!-- new releases ends ------->
+
+<!-- popular in your area begins ------->
+<div class="pl-4 mt-4 pb-24">
+    <div class="w-full mb-3">
+        <p class="font-bold text-2xl text-[#EFEEE0]">Popular in your area.</p>
+    </div>
+    <div class="w-full h-52 overflow-x-scroll">
+        <div class="w-[1281px] h-full grid gap-6 grid-cols-7">
+            <div class="h-36 w-36 ">
+                <img src="/images/Rectangle 14.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Life in a bubble</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 15.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Mountain</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Limits</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 17.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Everything black</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 19.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Cancelled</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 20.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Nomad</p>
+            </div>
+            <div class="h-36 w-36">
+                <img src="/images/Rectangle 18.png" class="w-full h-full object-cover rounded-2xl">
+                 <p class="font-normal text-sm text-[white] mt-2">Blind</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- popular in your area ends ------->
+        </div>
+<!-- home page ends here ------------------->
+
+
+
+
+<!-- my collection begins here-->
+    <div class="w-full hidden" id="my-collection">
+        <div class="sm:pl-20 sm:pt-0 pt-16 w-full">
+            <div class="flex items-center sm:justify-start justify-around gap-8 pt-11">
+                <p class="py-2 sm:px-4 sm:w-auto text-center w-[40%]  bg-[#FACD66] font-normal text-sm text-[#1D2123] rounded-2xl">My Collection</p>
+                <p class="py-2 sm:px-4 sm:w-auto text-center w-[40%] bg-none border-2 border-[#EFEEE0] font-normal rounded-2xl text-sm text-[#EFEEE0]">Likes</p>
+            </div>
+            <div class="items-center gap-4 sm:flex p-5 sm:py-5 sm:px-0">
+                <div class="sm:w-44 h-52 w-full mb-5 relative" id="my-collections" onmouseenter="collectionStart(event)" onmouseleave="collectionEnd(event)">
+                    <img src="/images/Rectangle 16.png" class="object-cover w-full h-full rounded-xl z-0 opacity-50 hover:opacity-100 hover:object-contain">
+                    <div class="w-full h-full bg-gradient-to-t from-black to-[transparent] absolute top-0"></div>
+                    <div class="absolute bottom-3 w-full p-3">
+                        <div class="relative flex justify-between items-end" id="text-collection">
+                            <div>
+                                <p class="text-[#EFEEE0] font-normal text-2xl mb-1">Limits</p>
+                                <p class="text-[10px] font-normal text-[#EFEEE0] mb-4">John Watts</p>
+                                <p class="text-sm font-normal text-[#EFEEE0] sm:hidden" id="collection-text">2.3m likes</p> 
+                            </div>
+                            
+                            <div class="relative sm:hidden" id="target">
+                                <img src="/images/Fill-1.png">
+                                <img src="/images/Fill-4.png" class="absolute top-[30%] left-[30%]"> 
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+                <div class="sm:w-44 h-52 w-full mb-5 relative" id="my-collections" onmouseenter="collectionStart(event)" onmouseleave="collectionEnd(event)">
+                    <img src="/images/Rectangle 19.png" class="object-cover w-full h-full rounded-xl z-0 opacity-50 hover:opacity-100 hover:object-contain">
+                    <div class="w-full h-full bg-gradient-to-t from-black to-[transparent] absolute top-0"></div>
+                    <div class="absolute bottom-3 w-full p-3">
+                        <div class="relative flex justify-between items-end" id="text-collection">
+                            <div>
+                                <p class="text-[#EFEEE0] font-normal text-2xl mb-1">Limits</p>
+                                <p class="text-[10px] font-normal text-[#EFEEE0] mb-4">John Watts</p>
+                                <p class="text-sm font-normal text-[#EFEEE0] sm:hidden" id="collection-text">2.3m likes</p> 
+                            </div>
+                            
+                            <div class="relative sm:hidden" id="target">
+                                <img src="/images/Fill-1.png">
+                                <img src="/images/Fill-4.png" class="absolute top-[30%] left-[30%]"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm:w-44 h-52 w-full mb-5 relative" id="my-collections" onmouseenter="collectionStart(event)" onmouseleave="collectionEnd(event)">
+                    <img src="/images/Rectangle 14.png" class="object-cover w-full h-full rounded-xl z-0 opacity-50 hover:opacity-100 hover:object-contain">
+                    <div class="w-full h-full bg-gradient-to-t from-black to-[transparent] absolute top-0"></div>
+                    <div  class="absolute bottom-3 w-full p-3">
+                        <div class="relative flex justify-between items-end" id="text-collection">
+                            <div>
+                                <p class="text-[#EFEEE0] font-normal text-2xl mb-1">Limits</p>
+                                <p class="text-[10px] font-normal text-[#EFEEE0] mb-4">John Watts</p>
+                                <p class="text-sm font-normal text-[#EFEEE0] sm:hidden" id="collection-text">2.3m likes</p> 
+                            </div>
+                            
+                            <div class="relative sm:hidden" id="target">
+                                <img src="/images/Fill-1.png">
+                                <img src="/images/Fill-4.png" class="absolute top-[30%] left-[30%]"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm:w-44 h-52 w-full mb-5 relative" id="my-collections" onmouseenter="collectionStart(event)" onmouseleave="collectionEnd(event)">
+                    <img src="/images/Rectangle 21.png" class="object-cover w-full h-full rounded-xl z-0 opacity-50 hover:opacity-100 hover:object-contain">
+                    <div class="w-full h-full bg-gradient-to-t from-black to-[transparent] absolute top-0"></div>
+                    <div class="absolute bottom-3 w-full p-3">
+                        <div class="relative flex justify-between items-end" id="text-collection">
+                            <div>
+                                <p class="text-[#EFEEE0] font-normal text-2xl mb-1">Limits</p>
+                                <p class="text-[10px] font-normal text-[#EFEEE0] mb-4">John Watts</p>
+                                <p class="text-sm font-normal text-[#EFEEE0] sm:hidden" id="collection-text">2.3m likes</p> 
+                            </div>
+                            
+                            <div class="relative sm:hidden transition-all" id="target">
+                                <img src="/images/Fill-1.png">
+                                <img src="/images/Fill-4.png" class="absolute top-[30%] left-[30%]"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+<!-- my collection ends here-->
+
+<!-- view chart or album begins here-->
+    <div class="w-full h-full hidden" id="chart">
+        <div class="w-full h-full">
+            <img src="/images/Lead-image.png" class="w-full h-full object-cover opacity-30">
+            <div class="w-full h-full bg-gradient-to-t from-black to-[transparent] fixed top-0 z-[2]"></div>
+
+            <div class="sm:pl-20 sm:pt-0 pt-16 w-full absolute top-8 sm:top-24 z-[3]">
+                <div class="sm:flex items-end gap-7 sm:p-0 px-4">
+                    <div class="h-72 sm:w-72 w-full mb-4">
+                        <img src="/images/Lead-image.png" class="h-full w-full object-cover rounded-2xl">
+                    </div>
+                    <div class="sm:w-[40%] w-full pb-3">
+                        <div class="mb-5">
+                            <p class="font-bold text-4xl text-[#A4C7C6] mb-2">Tomorrow's tunes</p>
+                            <p class="font-normal text-sm text-[#EFEEE0] mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
+                            <p class="font-normal text-sm text-[#EFEEE0]">64 songs - 16hrs+</p> 
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex items-center px-4 py-2 gap-2 bg-[#FFFFFF12] backdrop-filter rounded-2xl">
+                                <div>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00001 0.333313C10.6744 0.333313 13.6667 3.32415 13.6667 7.00384C13.6667 10.6758 10.6744 13.6666 7.00001 13.6666C3.32562 13.6666 0.333344 10.6758 0.333344 7.00384C0.333344 3.32415 3.32562 0.333313 7.00001 0.333313ZM6.24068 4.35325C6.09911 4.35325 5.96397 4.38541 5.83527 4.44973C5.6744 4.53978 5.5457 4.68128 5.47491 4.84851C5.42987 4.96428 5.35908 5.3116 5.35908 5.31804C5.2883 5.69752 5.24969 6.31498 5.24969 6.99676C5.24969 7.64703 5.2883 8.23812 5.34621 8.62403C5.35265 8.63047 5.42343 9.0614 5.50065 9.20934C5.64222 9.47948 5.91893 9.64671 6.21494 9.64671H6.24068C6.43373 9.64028 6.83913 9.47305 6.83913 9.46661C7.52125 9.18361 8.86616 8.30244 9.4067 7.71714L9.44531 7.67854C9.5161 7.60779 9.60619 7.49845 9.62549 7.47272C9.72845 7.33765 9.77993 7.17042 9.77993 7.00384C9.77993 6.81667 9.72202 6.64301 9.61262 6.50151C9.58688 6.47578 9.49036 6.36644 9.40027 6.27639C8.8726 5.71038 7.4955 4.78419 6.77478 4.50119C6.66539 4.45681 6.38868 4.35968 6.24068 4.35325Z" fill="#FACD66"/>
+                                        </svg>
+                                        
+                                </div>
+                                <p class="font-normal text-sm text-[#FFFFFF]">Play All</p>
+                            </div>
+                            <div class="flex items-center px-4 py-2 gap-2 bg-[#FFFFFF12] backdrop-filter rounded-2xl">
+                                <div>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.79334 0.333313H4.20668C4.02001 0.333313 3.84001 0.33998 3.66668 0.366646C1.56668 0.55998 0.333344 1.96665 0.333344 4.20665V9.79331C0.333344 12.0333 1.56668 13.44 3.66668 13.6333C3.84001 13.66 4.02001 13.6666 4.20668 13.6666H8.00001C8.26001 13.6666 8.42668 13.3733 8.32668 13.1333C8.13334 12.6733 8.00001 12.14 8.00001 11.6666C8.00001 9.64665 9.64668 7.99998 11.6667 7.99998C12.1733 7.99998 12.6667 8.09998 13.12 8.29998C13.3667 8.40665 13.6667 8.23998 13.6667 7.97331V4.20665C13.6667 1.77998 12.22 0.333313 9.79334 0.333313ZM8.65334 4.36665V7.53998C8.65334 7.54665 8.64668 7.55331 8.64668 7.56665C8.63334 8.37998 7.97334 9.03998 7.15334 9.03998C6.32668 9.03998 5.66001 8.36665 5.66001 7.54665C5.66001 6.71998 6.33334 6.05331 7.15334 6.05331C7.32668 6.05331 7.49334 6.08665 7.65334 6.14665V5.01998L5.00668 5.73998V8.20665C5.00668 8.21331 5.00001 8.21998 5.00001 8.22665C4.98668 9.03998 4.32668 9.69331 3.50668 9.69331C2.68001 9.69331 2.01334 9.01998 2.01334 8.19998C2.01334 7.37998 2.68668 6.70665 3.50668 6.70665C3.68001 6.70665 3.84668 6.73998 4.00001 6.79998V5.35998V4.19331C4.00001 3.57331 4.38668 3.07331 4.98001 2.91331L6.96668 2.36665C7.58668 2.19998 7.96668 2.36665 8.18001 2.52665C8.48668 2.75998 8.64001 3.13998 8.64001 3.64665V4.36665H8.65334Z" fill="#FACD66"/>
+                                    </svg>
+                                </div>
+                                <p class="font-normal text-sm text-[#FFFFFF]">Add to collections</p>
+                            </div>
+                            <div class="flex items-center px-4 py-2 gap-2 bg-[#FFFFFF12] backdrop-filter rounded-2xl">
+                                <div>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.51987 0.666973C4.93987 0.679746 5.34654 0.75308 5.74054 0.88708H5.77987C5.80654 0.899746 5.82654 0.913746 5.83987 0.926413C5.9872 0.973746 6.12654 1.02708 6.25987 1.10041L6.5132 1.21375C6.6132 1.26708 6.7332 1.36641 6.79987 1.40708C6.86654 1.44641 6.93987 1.48708 6.99987 1.53308C7.74054 0.96708 8.63987 0.660413 9.56654 0.666973C9.9872 0.666973 10.4072 0.726413 10.8065 0.860413C13.2672 1.66041 14.1539 4.36041 13.4132 6.72041C12.9932 7.92641 12.3065 9.02708 11.4072 9.92641C10.1199 11.1731 8.7072 12.2797 7.18654 13.2331L7.01987 13.3337L6.84654 13.2264C5.32054 12.2797 3.89987 11.1731 2.60054 9.91975C1.7072 9.02041 1.01987 7.92641 0.593202 6.72041C-0.160131 4.36041 0.726535 1.66041 3.21387 0.846413C3.4072 0.779746 3.60654 0.73308 3.80654 0.70708H3.88654C4.07387 0.679746 4.25987 0.666973 4.44654 0.666973H4.51987ZM10.4599 2.77375C10.1865 2.67975 9.88654 2.82708 9.78654 3.10708C9.6932 3.38708 9.83987 3.69375 10.1199 3.79308C10.5472 3.95308 10.8332 4.37375 10.8332 4.83975V4.86041C10.8205 5.01308 10.8665 5.16041 10.9599 5.27375C11.0532 5.38708 11.1932 5.45308 11.3399 5.46708C11.6132 5.45975 11.8465 5.24041 11.8665 4.95975V4.88041C11.8865 3.94641 11.3205 3.10041 10.4599 2.77375Z" fill="#E5524A"/>
+                                        </svg>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                </div>
+                <div class="w-full px-4 sm:pr-14">
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex items-center py-3 px-4 rounded-2xl bg-[#FFFFFF12] hover:bg-[#ffffff4a] backdrop-filter mb-3 justify-between" id="view-chart">
+                        <div class="flex items-center gap-4">
+                            <div class="w-9 h-9"><img src="/images/Rectangle 16.png" class="w-full h-full object-cover rounded-lg"></div>
+                            <div class="hidden sm:block">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="0.625" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:items-center sm:gap-36">
+                            <p class="font-normal text-sm text-[#FFFFFF] sm:mb-0 mb-2">Let me love you - Krisx</p>
+                            <p class="font-normal sm:text-sm text-[12px] text-[#FFFFFF]">Single</p>
+                        </div>
+                        <div class="sm:flex sm:flex-row-reverse sm:items-center sm:gap-36">
+                            
+                            <div>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.25789 7.58341C7.58006 7.58341 7.84123 7.32225 7.84123 7.00008C7.84123 6.67792 7.58006 6.41675 7.25789 6.41675C6.93573 6.41675 6.67456 6.67792 6.67456 7.00008C6.67456 7.32225 6.93573 7.58341 7.25789 7.58341Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 3.49992C7.58006 3.49992 7.84123 3.23875 7.84123 2.91659C7.84123 2.59442 7.58006 2.33325 7.25789 2.33325C6.93573 2.33325 6.67456 2.59442 6.67456 2.91659C6.67456 3.23875 6.93573 3.49992 7.25789 3.49992Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.25789 11.6667C7.58006 11.6667 7.84123 11.4055 7.84123 11.0833C7.84123 10.7612 7.58006 10.5 7.25789 10.5C6.93573 10.5 6.67456 10.7612 6.67456 11.0833C6.67456 11.4055 6.93573 11.6667 7.25789 11.6667Z" stroke="#FACD66" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                    
+                            </div>
+                            <div>
+                                <p class="font-normal text-sm text-[#FFFFFF] sm:mt-0 mt-2">4:17</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- view chart or album ends here-->
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+<!-- main ends ------->
+
+<!-- play nav begins -->
+    <div class="w-full fixed bottom-0 z-50" id="play-nav">
+        <div class="backdrop-blur-sm backdrop-filter bg-[black] z-50 bg-opacity-[0.3] w-full h-24 border-t border-[#ffffff97]"></div>
+            <div class="sm:pl-20 px-7 sm:pr-7 py-4 flex justify-between items-center  w-full h-full absolute top-0">
+
+               <div class="flex justify-between items-center gap-3">
+                    <div class="w-12 h-42">
+                        <img src="/images/Rectangle 21.png" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm text-[white] mb-1">Seasons in</p>
+                        <p class="font-bold text-[12px] text-[white] opacity-50">James</p>
+                    </div>
+                </div>
+
+                <div class="w-[50%]">
+                    <div class="flex justify-between items-center w-60 mx-auto">
+                        <div class="sm:flex justfify-between items-center gap-6 hidden">
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-[white] w-6 h-6 opacity-100 hover:fill-[#FACD66] hover:opacity-100">
+                                <path d="M14.5 12.7593C14.5 12.746 14.4933 12.7327 14.4933 12.7193C14.4867 12.666 14.48 12.6127 14.46 12.566C14.4333 12.506 14.4 12.4593 14.36 12.4127C14.36 12.4127 14.36 12.406 14.3533 12.406C14.3067 12.3593 14.2533 12.326 14.1933 12.2993C14.1333 12.2727 14.0667 12.2593 14 12.2593L10.8867 12.2727C10.8867 12.2727 10.8867 12.2727 10.88 12.2727C10.48 12.2727 10.0933 12.086 9.85333 11.766L9.04 10.7193C8.87333 10.4993 8.56 10.4593 8.34 10.6327C8.12 10.806 8.08 11.1127 8.25333 11.3327L9.06666 12.3793C9.5 12.9393 10.18 13.2727 10.8867 13.2727H10.8933L12.7933 13.266L12.32 13.7393C12.1267 13.9327 12.1267 14.2527 12.32 14.446C12.42 14.546 12.5467 14.5927 12.6733 14.5927C12.8 14.5927 12.9267 14.546 13.0267 14.446L14.36 13.1127C14.4067 13.066 14.44 13.0127 14.4667 12.9527C14.4867 12.886 14.5 12.8193 14.5 12.7593Z"/>
+                                <path d="M5.61333 5.23266C5.18 4.63266 4.48667 4.27933 3.74667 4.27933C3.74 4.27933 3.74 4.27933 3.73333 4.27933L2 4.28599C1.72667 4.28599 1.5 4.51266 1.5 4.78599C1.5 5.05933 1.72667 5.28599 2 5.28599L3.74 5.27933H3.74667C4.16667 5.27933 4.56 5.47933 4.8 5.81933L5.52 6.81933C5.62 6.95266 5.77333 7.02599 5.92667 7.02599C6.02667 7.02599 6.13333 6.99266 6.22 6.93266C6.44667 6.76599 6.49333 6.45266 6.33333 6.23266L5.61333 5.23266Z"/>
+                                <path d="M14.4933 4.82597C14.4933 4.81263 14.5 4.7993 14.5 4.79263C14.5 4.72597 14.4867 4.6593 14.46 4.5993C14.4333 4.5393 14.4 4.48597 14.3533 4.4393L13.02 3.10597C12.8267 2.91263 12.5067 2.91263 12.3133 3.10597C12.12 3.2993 12.12 3.6193 12.3133 3.81263L12.7867 4.28597L10.9667 4.2793C10.96 4.2793 10.96 4.2793 10.9533 4.2793C10.1867 4.2793 9.46667 4.6593 9.04 5.30597L4.78 11.6926C4.54 12.0526 4.13333 12.2726 3.7 12.2726H3.69333L2 12.2593C1.72667 12.2593 1.5 12.4793 1.5 12.7593C1.5 13.0326 1.72 13.2593 2 13.2593L3.7 13.266C3.70667 13.266 3.70667 13.266 3.71333 13.266C4.48667 13.266 5.2 12.886 5.62667 12.2393L9.88667 5.85263C10.1267 5.49263 10.5333 5.27263 10.9667 5.27263H10.9733L14 5.28597C14.0667 5.28597 14.1267 5.27263 14.1933 5.24597C14.2533 5.2193 14.3067 5.18597 14.3533 5.1393C14.3533 5.1393 14.3533 5.13263 14.36 5.13263C14.4 5.08597 14.44 5.0393 14.46 4.9793C14.48 4.93263 14.4867 4.8793 14.4933 4.82597Z"/>
+                            </svg>
+    
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-[white] w-6 h-6 opacity-100 hover:fill-[#FACD66] hover:opacity-100">
+                                <path d="M13.4933 5.58597V11.966C13.4933 13.2726 12.0733 14.0926 10.94 13.4393L8.17334 11.846L5.40667 10.246C4.27334 9.59263 4.27334 7.9593 5.40667 7.30597L8.17334 5.70597L10.94 4.11263C12.0733 3.4593 13.4933 4.27263 13.4933 5.58597Z"/>
+                                <path d="M2.50668 13.3926C2.23335 13.3926 2.00668 13.166 2.00668 12.8926V4.65265C2.00668 4.37932 2.23335 4.15265 2.50668 4.15265C2.78002 4.15265 3.00668 4.37932 3.00668 4.65265V12.8926C3.00668 13.166 2.78002 13.3926 2.50668 13.3926Z"/>
+                                </svg>
+                         </div>
+                        <div class="flex justfify-between items-center gap-6">
+                            <svg width="61" height="62" viewBox="0 0 61 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_19_109)">
+                                <rect x="18" y="18" width="25" height="25.5453" rx="12.5" fill="#FACD66" shape-rendering="crispEdges"/>
+                                <path d="M26.3333 30.7726V28.9536C26.3333 26.6192 27.9856 25.6643 30.0017 26.8315L31.5781 27.7409L33.1546 28.6504C35.1707 29.8176 35.1707 31.7276 33.1546 32.8948L31.5781 33.8043L30.0017 34.7138C27.9856 35.881 26.3333 34.926 26.3333 32.5917V30.7726Z" fill="#EFEEE0"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_19_109" x="0" y="0" width="61" height="61.5453" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="9"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_19_109"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_19_109" result="shape"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-[white] w-6 h-6 opacity-100 hover:fill-[#FACD66] hover:opacity-100">
+                                <path d="M2.50667 5.58597V11.966C2.50667 13.2726 3.92667 14.0926 5.06 13.4393L7.82667 11.846L10.5933 10.246C11.7267 9.59263 11.7267 7.9593 10.5933 7.30597L7.82667 5.70597L5.06 4.11263C3.92667 3.4593 2.50667 4.27263 2.50667 5.58597Z"/>
+                                <path d="M13.4933 13.3926C13.22 13.3926 12.9933 13.166 12.9933 12.8926V4.65265C12.9933 4.37932 13.22 4.15265 13.4933 4.15265C13.7667 4.15265 13.9933 4.37932 13.9933 4.65265V12.8926C13.9933 13.166 13.7733 13.3926 13.4933 13.3926Z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:block">
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-[white] w-6 h-6 opacity-100 hover:fill-[#FACD66] hover:opacity-100">
+                                <path d="M2.60666 12.226C2.48 12.226 2.35333 12.1793 2.25333 12.0793C1.34 11.1593 0.833328 9.94596 0.833328 8.65929C0.833328 5.98596 2.99999 3.81263 5.66666 3.81263L9.71333 3.82596L8.98666 3.13263C8.78666 2.93929 8.77999 2.62596 8.97333 2.42596C9.16666 2.22596 9.48 2.21929 9.68 2.41263L11.3067 3.97263C11.4533 4.11263 11.5 4.33263 11.4267 4.51929C11.3533 4.70596 11.1667 4.83263 10.96 4.83263L5.66666 4.81929C3.55333 4.81929 1.83333 6.54596 1.83333 8.66596C1.83333 9.68596 2.23333 10.6526 2.96 11.3793C3.15333 11.5726 3.15333 11.8926 2.96 12.086C2.86 12.1793 2.73333 12.226 2.60666 12.226Z"/>
+                                <path d="M6.66666 15.2726C6.53999 15.2726 6.41999 15.226 6.31999 15.1326L4.69333 13.5726C4.54666 13.4326 4.49999 13.2126 4.57333 13.026C4.65333 12.8393 4.83999 12.7393 5.03999 12.7126L10.34 12.726C12.4533 12.726 14.1733 10.9993 14.1733 8.8793C14.1733 7.8593 13.7733 6.89263 13.0467 6.16597C12.8533 5.97263 12.8533 5.65263 13.0467 5.4593C13.24 5.26597 13.56 5.26597 13.7533 5.4593C14.6667 6.3793 15.1733 7.59263 15.1733 8.8793C15.1733 11.5526 13.0067 13.726 10.34 13.726L6.29333 13.7126L7.01999 14.406C7.21999 14.5993 7.22666 14.9126 7.03333 15.1126C6.92666 15.2193 6.79999 15.2726 6.66666 15.2726Z"/>
+                                <path d="M8.16667 11.0526C7.89334 11.0526 7.66667 10.826 7.66667 10.5526V8.29264L7.54 8.43264C7.35334 8.63931 7.04 8.65264 6.83334 8.47264C6.62667 8.29264 6.61334 7.97264 6.79334 7.76597L7.79334 6.65264C7.93334 6.49931 8.15334 6.44597 8.34667 6.51931C8.54 6.59931 8.66667 6.77931 8.66667 6.99264V10.5593C8.66667 10.8326 8.44 11.0526 8.16667 11.0526Z"/>
+                            </svg>        
+                        </div>
+                    </div>
+                    <div class="pb-4 hidden sm:block">
+                        <input type="range" min="0" max="100" value="50" class="w-full h-1 bg-[white] bg-opacity-50 appearance-none rounded-lg">
+                    </div>
+                </div>
+                <div class="hidden sm:block">
+                    <input type="range" min="0" max="100" value="50" class="w-full h-1 bg-[white] bg-opacity-50 appearance-none rounded-lg">
+                </div>
+
+            </div>
+            
+
+        
+    </div>
+<!-- play nav ends -->
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

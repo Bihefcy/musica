@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#collection-button:checked ~ label #collection div svg {
+    fill: #FACD66;
+    opacity: 1;
+}
+
+#collection-button:checked ~ label #collection div #text {
+    color: #EFEEE0;
+    opacity: 1;
+}
+
+#home-button:checked ~ label #home div #svg {
+    fill: #FACD66;
+    opacity: 1;
+}
+
+#home-button:checked ~ label #home div #text {
+    color: #EFEEE0;
+    opacity: 1;
+}
+
+*::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.227);
+    width: 0.5em;
+    height: 0.5em;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FACD66;
+    border-radius: 10px;
+}
